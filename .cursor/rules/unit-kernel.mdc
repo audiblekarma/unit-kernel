@@ -1,0 +1,12 @@
+---
+description: When porting this operating protocol or designing the kernel itself
+alwaysApply: false
+---
+
+# Unit Kernel v1.0
+
+Registered Feature of Studio Framework v1.9. Hierarchical text: `.cursor/framework/HIERARCHY.txt`. Spec: `.cursor/framework/KERNEL.md`. Port steps: `.cursor/framework/PORT.md`.
+
+The kernel is transplantable. Purpose Pack is not. Field Ledger rows with `portable: true` move; others stay.
+
+Do not add a second routing level under Layer. Do not eager-load specs. Do not rewrite ledger rows.

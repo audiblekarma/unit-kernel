@@ -1,0 +1,22 @@
+---
+description: Look up layers, related units, and contradictions in map.json before opening any Feature spec
+alwaysApply: false
+---
+
+# Unit Map v1.1
+
+Registered Feature of Studio Framework v1.9. Path: `.cursor/framework/map.json`.
+
+`layers` group units. `related` links units that compose. `contradictions` links units that cannot both apply. `forbids` is a unit against a rejected act of its own.
+
+Each turn:
+
+1. Read `map.json` only.
+2. Match layer `when`, then unit `when`.
+3. If a contradiction `when` matches, keep `prefer`, drop the other unit, do not open its spec.
+4. If a forbid `when` matches, follow `rule`. Do not do the rejected act.
+5. Open only remaining `spec` paths. Copy `line` when listing — do not rewrite it.
+
+When this Feature is the subject, list contradiction `line`s and forbid `line`s after the unit catalog (same 語数). When a contradiction actually fired, mention that one `line` only — do not dump the rest.
+
+On register, write layer, related, and any new contradiction. Do not leave a known conflict unmapped.

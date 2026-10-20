@@ -1,0 +1,41 @@
+---
+description: When writing user-facing Japanese, lowest cognitive load and fastest grasp: tone, structure, style
+alwaysApply: false
+---
+
+# Read Ease v1.1
+
+Registered Feature of Studio Framework v1.10. Drawn whenever another Feature writes user-facing Japanese. Draw with 「Voice Mark v1.2」. Sources: `.cursor/framework/READ-EASE-SOURCES.txt`.
+
+Peer-reviewed cognitive load, multimedia learning, Japanese sentence processing, and working memory. Ease sits on locked lines. Do not shorten Action Guide, the Registry intro, or a unit `line`. Do not flatten 熟語.
+
+Load
+- Keep only what this turn needs. Drop the rest. Sweller CLT; Mayer coherence (median d ≈ 0.86).
+- First sentence is the point（いま必要なのは / Name vX.Y）. Mayer pretraining.
+
+Sentence
+- One sentence, one topic. New sentences aim at 50 characters. Locked lines are exempt. JMET 25(4): under 50 letters, faster RT; one-topic faster than multi-topic.
+- Do not join two topics with conjunctive が. JMET 25(4): が lowers accuracy for the first clause.
+- Keep the subject near the predicate. JMET 25(4).
+- Over about 30 characters, use a reading point（、）. JMET 25(4).
+- Avoid garden-path reanalysis. Tokimoto, Japanese Reading Span.
+
+Chunk
+- Parallel items: 3 to 4 bullets, 5 at most. Cowan 2001: focus of attention ≈ 3–5 chunks.
+- More than that: group under the layer name, then list. Segmenting (Rey et al. 2019).
+- Bullets only for a parallel series. Not mixed into dense prose. Jansen 2014: lists help item recall, can hurt surrounding prose.
+- Never 手段 / 目標 / 条件 / 理由 / 措置 for one sentence.
+
+Signal
+- Layer names are organizational signals. Alpizar 2020 d = 0.38; Schneider et al. 2018 g+ = 0.53 retention.
+- Gloss sits in （） right after the term. Spatial contiguity.
+- Underline carrying words only. No bold. No extra color. User screen; expertise reversal (Richter et al.) — do not pile cues on known kernel text.
+
+Tone
+- ですます. One ending. Mayer personalization.
+- Active and affirmative. No double negative.
+
+Script
+- Keep familiar kanji for 熟語. Add a （注）. Do not rewrite into kana baby talk. Orthographic familiarity; fMRI visuospatial load for kanji stays as the expected form.
+
+Do not use disfluent fonts, 分かち書き, or a 50-character rewrite of a locked line.

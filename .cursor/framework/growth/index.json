@@ -1,0 +1,160 @@
+{
+  "feature": {
+    "id": "growth-map",
+    "name": "Growth Map",
+    "version": "v1.0"
+  },
+  "tree": ".cursor/framework/GROWTH.txt",
+  "log": ".cursor/framework/growth/log.jsonl",
+  "kinds": [
+    "seed",
+    "born",
+    "lock",
+    "bump",
+    "reject",
+    "split",
+    "settle",
+    "store"
+  ],
+  "framework": [
+    {
+      "to": "v1.6",
+      "step": "G0024",
+      "note": "Unit Map"
+    },
+    {
+      "to": "v1.7",
+      "step": "G0026",
+      "note": "Kernel Ledger Purpose"
+    },
+    {
+      "to": "v1.8",
+      "step": "G0029",
+      "note": "contradictions settle"
+    },
+    {
+      "to": "v1.9",
+      "step": "G0031",
+      "note": "Read Ease"
+    },
+    {
+      "to": "v1.10",
+      "step": "G0032",
+      "note": "Read Ease v1.1"
+    },
+    {
+      "to": "v1.11",
+      "step": "G0036",
+      "note": "Growth Map"
+    }
+  ],
+  "units": {
+    "action-guide": {
+      "name": "Action Guide",
+      "now": "v1.0",
+      "born": "G0008",
+      "steps": [
+        "G0001",
+        "G0002",
+        "G0003",
+        "G0004",
+        "G0005",
+        "G0006",
+        "G0007",
+        "G0008",
+        "G0009",
+        "G0010"
+      ]
+    },
+    "feature-registry": {
+      "name": "Feature Registry",
+      "now": "v1.8",
+      "born": "G0011",
+      "steps": [
+        "G0011",
+        "G0012",
+        "G0013",
+        "G0014",
+        "G0015",
+        "G0016",
+        "G0017",
+        "G0018",
+        "G0019"
+      ]
+    },
+    "settle-prompt": {
+      "name": "Settle Prompt",
+      "now": "v1.0",
+      "born": "G0020",
+      "steps": [
+        "G0020"
+      ]
+    },
+    "voice-mark": {
+      "name": "Voice Mark",
+      "now": "v1.2",
+      "born": "G0021",
+      "steps": [
+        "G0021",
+        "G0022",
+        "G0023"
+      ]
+    },
+    "unit-map": {
+      "name": "Unit Map",
+      "now": "v1.1",
+      "born": "G0024",
+      "steps": [
+        "G0024",
+        "G0025"
+      ]
+    },
+    "unit-kernel": {
+      "name": "Unit Kernel",
+      "now": "v1.0",
+      "born": "G0026",
+      "steps": [
+        "G0026",
+        "G0029",
+        "G0034",
+        "G0035",
+        "G0037"
+      ]
+    },
+    "field-ledger": {
+      "name": "Field Ledger",
+      "now": "v1.0",
+      "born": "G0027",
+      "steps": [
+        "G0027"
+      ]
+    },
+    "purpose-pack": {
+      "name": "Purpose Pack",
+      "now": "v1.0",
+      "born": "G0028",
+      "steps": [
+        "G0028"
+      ]
+    },
+    "read-ease": {
+      "name": "Read Ease",
+      "now": "v1.1",
+      "born": "G0031",
+      "steps": [
+        "G0030",
+        "G0031",
+        "G0032",
+        "G0033"
+      ]
+    },
+    "growth-map": {
+      "name": "Growth Map",
+      "now": "v1.0",
+      "born": "G0036",
+      "steps": [
+        "G0036"
+      ]
+    }
+  }
+}

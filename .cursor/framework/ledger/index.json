@@ -1,0 +1,184 @@
+{
+  "records": [
+    {
+      "id": "L0001",
+      "kind": "failure",
+      "when": "shortening the token-delete line to 終わったら削除します",
+      "portable": true
+    },
+    {
+      "id": "L0002",
+      "kind": "success",
+      "when": "locking the three-line and two-bullet Action Guide form",
+      "portable": true
+    },
+    {
+      "id": "L0003",
+      "kind": "failure",
+      "when": "splitting one locked sentence into 手段 目標 条件 理由 措置",
+      "portable": true
+    },
+    {
+      "id": "L0004",
+      "kind": "success",
+      "when": "listing parallel items as bullets of the locked 語数",
+      "portable": true
+    },
+    {
+      "id": "L0005",
+      "kind": "failure",
+      "when": "using markdown bold for emphasis in user-facing Japanese",
+      "portable": true
+    },
+    {
+      "id": "L0006",
+      "kind": "success",
+      "when": "emphasizing with underline and 括弧 instead of bold",
+      "portable": true
+    },
+    {
+      "id": "L0007",
+      "kind": "failure",
+      "when": "using Action Guide on a turn that is not an account click or token",
+      "portable": true
+    },
+    {
+      "id": "L0008",
+      "kind": "success",
+      "when": "drawing a Feature only when its when matches",
+      "portable": true
+    },
+    {
+      "id": "L0009",
+      "kind": "success",
+      "when": "asking 定着させるか when a reusable unregistered form appears",
+      "portable": true
+    },
+    {
+      "id": "L0010",
+      "kind": "success",
+      "when": "looking up units in map.json by layer before opening specs",
+      "portable": true
+    },
+    {
+      "id": "L0011",
+      "kind": "fact",
+      "when": "citing progressive disclosure cost versus eager-loading every spec",
+      "portable": true
+    },
+    {
+      "id": "L0012",
+      "kind": "fact",
+      "when": "recording architecture decisions as fact then insight then decision",
+      "portable": true
+    },
+    {
+      "id": "L0014",
+      "kind": "insight",
+      "when": "porting this operating protocol to another system",
+      "portable": true
+    },
+    {
+      "id": "L0015",
+      "kind": "success",
+      "when": "mapping contradictions between units in map.json",
+      "portable": true
+    },
+    {
+      "id": "L0016",
+      "kind": "success",
+      "when": "settling Studio Framework v1.8 and writing the hierarchical text",
+      "portable": true
+    },
+    {
+      "id": "L0017",
+      "kind": "success",
+      "when": "user approved Studio Framework v1.8",
+      "portable": true
+    },
+    {
+      "id": "L0018",
+      "kind": "experiment",
+      "when": "implementing Read Ease as low-load Japanese presentation",
+      "portable": true
+    },
+    {
+      "id": "L0019",
+      "kind": "fact",
+      "when": "citing signaling meta-analyses for Read Ease cues",
+      "portable": true
+    },
+    {
+      "id": "L0020",
+      "kind": "fact",
+      "when": "citing Japanese sentence-length and one-topic results for Read Ease",
+      "portable": true
+    },
+    {
+      "id": "L0021",
+      "kind": "fact",
+      "when": "citing Cowan working-memory chunk limit for list length",
+      "portable": true
+    },
+    {
+      "id": "L0022",
+      "kind": "decision",
+      "when": "locking Read Ease v1.1 sourced rules without shortening locked lines",
+      "portable": true
+    },
+    {
+      "id": "L0023",
+      "kind": "success",
+      "when": "user said Read Ease v1.1 is enough for now including the source mix",
+      "portable": true
+    },
+    {
+      "id": "L0024",
+      "kind": "decision",
+      "when": "making Studio Framework v1.8 downloadable as a zip",
+      "portable": true
+    },
+    {
+      "id": "L0025",
+      "kind": "failure",
+      "when": "opening an undeployed workers.dev zip URL or previewing a zip without attachment headers",
+      "portable": true
+    },
+    {
+      "id": "L0027",
+      "kind": "failure",
+      "when": "publishing Studio Framework as a site zip instead of a GitHub framework",
+      "portable": true
+    },
+    {
+      "id": "L0028",
+      "kind": "decision",
+      "when": "keeping Studio Framework in git for GitHub instead of a public zip",
+      "portable": true
+    },
+    {
+      "id": "L0029",
+      "kind": "decision",
+      "when": "registering Growth Map v1.0 to map and record how units grow",
+      "portable": true
+    },
+    {
+      "id": "L0030",
+      "kind": "fact",
+      "when": "asking whether each framework improvement is automatically reflected to GitHub",
+      "portable": true
+    },
+    {
+      "id": "L0033",
+      "kind": "failure",
+      "when": "recommending GitHub name studio-framework and an Entheria description",
+      "portable": true
+    },
+    {
+      "id": "L0034",
+      "kind": "decision",
+      "when": "naming the GitHub repository for the portable kernel",
+      "portable": true
+    }
+  ]
+}

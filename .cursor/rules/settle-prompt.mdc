@@ -1,0 +1,20 @@
+---
+description: When a reusable unregistered form appeared or the user praised one, ask whether to settle it
+alwaysApply: false
+---
+
+# Settle Prompt v1.0
+
+Registered Feature of Studio Framework v1.9. Drawn only when Feature Registry matches `when`. Draw Voice Mark on the locked form.
+
+Ask autonomously. Do not wait for the user to say 定着. If they already ordered 定着 / 登録 / 固定, skip this Feature and register through Feature Registry.
+
+This exact form is locked. Do not restyle, split into labeled fields, shorten, or pad.
+
+```
+いま必要なのは、この型の<u>定着可否</u>です。
+「{提案名} v1.0」を使って、Feature として定着させるか答えてください（英語名です）。
+定着を使って、登録の目標を達成できた際は、<u>Registry</u> のため、当該 Feature を載せます（英語名と v1.0）。
+```
+
+Propose one English name. Do not dump the Registry catalog. Do not draw Action Guide unless that situation also matches.

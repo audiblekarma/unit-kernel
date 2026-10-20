@@ -1,0 +1,12 @@
+---
+description: When deciding what this instance is for, or when porting to another system
+alwaysApply: false
+---
+
+# Purpose Pack v1.0
+
+Registered Feature of Unit Kernel v1.0. File: `.cursor/framework/purpose.json`.
+
+Aims and constraints in that file specialize Unit Kernel without changing it. This copy ships an empty pack. Fill it for the system that uses the kernel.
+
+On port, replace `purpose.json`. Keep kernel units. Copy portable ledger rows. Drop Protocol units that name the old system unless the new system needs them.

@@ -1,0 +1,148 @@
+Unit Kernel v1.0
+核はどのシステムへも移植します。目的の中身だけ差し替えます。
+
+
+0. 全体
+
+    Unit Kernel v1.0
+    │
+    ├─ Dispatch（毎回・照合）
+    │     「Feature Registry v1.8」  照合と引き出し
+    │     「Unit Map v1.1」          階層・関連・矛盾
+    │
+    ├─ Kernel（移植の定義）
+    │     「Unit Kernel v1.0」       移植
+    │
+    ├─ Record（毎回すこし追記）
+    │     「Field Ledger v1.0」      記録
+    │     「Growth Map v1.0」        成長の記録
+    │
+    ├─ Purpose（この場の特化）
+    │     「Purpose Pack v1.0」      目的
+    │
+    ├─ Protocol（この場の手順）
+    │     「Settle Prompt v1.0」     定着の可否
+    │
+    └─ Mark（日本語の表記）
+          「Voice Mark v1.2」        太字は使わない
+          「Read Ease v1.1」         一文一義
+
+
+1. 核（移植する）
+
+    最小単位は Feature です。
+    一行で書きます（書き換えない）。
+
+        「{Name vX.Y}」は、{when}のときだけ引き出します（{note}）。
+
+    層（Layer）は一段だけです。
+    層の下にさらに段は足しません。
+
+    写像は map.json です。
+    記録の索引は ledger/index.json です。
+    成長の写像は GROWTH.txt です。
+    成長の索引は growth/index.json です。
+    目的は purpose.json です（移植時は差し替え）。
+
+
+2. 写像（map.json）
+
+    map.json
+    │
+    ├─ layers     分類。層の when を先に照合します。
+    ├─ units      最小単位。line / when / spec。
+    ├─ related    いっしょに使う結び（構成）。
+    ├─ contradictions
+    │               両立しない結び（排除）。
+    │               when が一致したら prefer を残し、
+    │               もう片方の spec は開きません。
+    └─ forbids      その Feature 自身の禁止。
+
+
+3. 矛盾（両立しない）
+
+    「Settle Prompt」と「Feature Registry」
+        定着が既に命じられたとき（聞かない）
+
+    「Unit Map」と「Unit Kernel」
+        層の下にさらに段（一段だけ）
+
+    「Field Ledger」と「Feature Registry」
+        機能一覧に記録全文（追記のみ）
+
+    「Growth Map」と「Feature Registry」
+        機能一覧に成長の全文（追記のみ）
+
+    「Growth Map」と「Field Ledger」
+        系統と出来事を一つの台帳（分けて追記）
+
+    「Read Ease」と「Growth Map」
+        成長の全文貼付（写像を先に）
+
+    「Voice Mark」自身
+        太字と下線（太字は使わない）
+        一文のラベル分割と箇条書き（分割しない）
+
+
+4. 毎ターン
+
+    1. map.json だけ読む
+    2. 層の when → 単位の when
+    3. 矛盾があれば prefer を残す
+    4. 記録の索引を照合し、一致した行だけ開く
+    5. 成長の索引を照合し、一致した単位だけ開く
+    6. 残った spec だけ開く
+    7. 出来事があれば台帳へ一行。成長があれば写像へ一行
+    8. ほかは閉じたまま
+
+
+5. 記録（Field Ledger）
+
+    種類は次の五つです（混ぜない）。
+
+        fact         観測（解釈しない）
+        experiment   試して見たこと
+        success      受け入れた型
+        failure      拒まれた型、または破損
+        insight      解釈（事実のふりをしない）
+
+    行は直しません。変わるときは新しい id で上書きします。
+    portable が true の行だけ、核といっしょに移植します。
+
+
+5b. 成長（Growth Map）
+
+    種類は次の八つです（台帳と混ぜない）。
+
+        seed     未登録の型
+        born     v1.0 として載った
+        lock     文や型の固定（版はそのまま）
+        bump     版が上がった
+        reject   拒まれた。引き算
+        split    一つの関心が二つになった
+        settle   その版で定着
+        store    置き場
+
+    写像は GROWTH.txt です。
+    詳細は growth/log.jsonl です。
+    行は直しません。起きていない段は書きません。
+
+
+6. この場の目的（Purpose Pack）
+
+    purpose.json を差し替えます。
+    核は変えません。
+
+
+7. 移植
+
+    持っていくもの
+        核の spec、map の型、記録の型
+        portable な記録
+
+    差し替えるもの
+        purpose.json
+
+    残すもの（前の場だけ）
+        前の場の手順単位と URL
+        portable が false の記録

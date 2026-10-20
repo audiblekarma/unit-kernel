@@ -1,0 +1,32 @@
+---
+description: When a unit grows, or when the user asks how units grow; map the steps and record the process
+alwaysApply: false
+---
+
+# Growth Map v1.0
+
+Registered Feature of Studio Framework v1.11. Index: `.cursor/framework/growth/index.json`. Log: `.cursor/framework/growth/log.jsonl`. Tree: `.cursor/framework/GROWTH.txt`.
+
+A Feature grows in small steps. This Feature maps those steps and records the process. 「Field Ledger v1.0」 records events. 「Growth Map v1.0」 records lineage. Do not mix the two logs. Do not dump the log into the Feature Registry catalog.
+
+Kinds (do not invent others without a bump):
+
+- `seed` — an unregistered form appeared
+- `born` — registered as v1.0
+- `lock` — a line or form locked, version unchanged
+- `bump` — version increased
+- `reject` — a form was refused; growth by subtraction
+- `split` — one concern became two units
+- `settle` — the user settled a version
+- `store` — where the framework is kept
+
+Each turn:
+
+1. Read `.cursor/framework/growth/index.json` only.
+2. Open a log line when its `unit` matches the current growth subject, or when the user asked how that unit grows.
+3. When listing the map, copy each unit's `steps` as id, kind, and `to`. Open log lines for 詳細.
+4. Close the rest.
+
+On growth: append one log row. Push its id onto that unit's `steps`. Set `now`. Do not rewrite a row. Supersede with a new id. Do not invent a step that did not happen.
+
+When this Feature is the subject, show the map grouped by layer. Do not paste the whole log into chat.

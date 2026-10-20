@@ -1,0 +1,307 @@
+{
+  "framework": {
+    "id": "unit-kernel",
+    "name": "Unit Kernel",
+    "version": "v1.0",
+    "kernel": "Unit Kernel v1.0",
+    "settled": true,
+    "hierarchy": ".cursor/framework/HIERARCHY.txt",
+    "features": ".cursor/framework/FEATURES.txt",
+    "growth": ".cursor/framework/GROWTH.txt",
+    "readEaseSources": ".cursor/framework/READ-EASE-SOURCES.txt"
+  },
+  "layers": [
+    {
+      "id": "dispatch",
+      "name": "Dispatch",
+      "when": "Every turn: pick which units to open. Also when registering or bumping.",
+      "units": [
+        "feature-registry",
+        "unit-map"
+      ]
+    },
+    {
+      "id": "kernel",
+      "name": "Kernel",
+      "when": "Porting this protocol, or designing the kernel itself.",
+      "units": [
+        "unit-kernel"
+      ]
+    },
+    {
+      "id": "record",
+      "name": "Record",
+      "when": "A fact, experiment, success, failure, or insight appeared, a unit grew, or a past record or growth step matches.",
+      "units": [
+        "field-ledger",
+        "growth-map"
+      ]
+    },
+    {
+      "id": "purpose",
+      "name": "Purpose",
+      "when": "Deciding what this instance is for, or porting to another system.",
+      "units": [
+        "purpose-pack"
+      ]
+    },
+    {
+      "id": "protocol",
+      "name": "Protocol",
+      "when": "Settle-ask, or a reusable unregistered form appeared.",
+      "units": [
+        "settle-prompt"
+      ]
+    },
+    {
+      "id": "mark",
+      "name": "Mark",
+      "when": "User-facing Japanese is being written.",
+      "units": [
+        "voice-mark",
+        "read-ease"
+      ]
+    }
+  ],
+  "related": {
+    "feature-registry": [
+      "unit-map",
+      "voice-mark",
+      "field-ledger",
+      "growth-map"
+    ],
+    "unit-map": [
+      "feature-registry",
+      "field-ledger",
+      "unit-kernel",
+      "growth-map"
+    ],
+    "unit-kernel": [
+      "purpose-pack",
+      "field-ledger",
+      "unit-map",
+      "growth-map"
+    ],
+    "field-ledger": [
+      "feature-registry",
+      "unit-map",
+      "growth-map"
+    ],
+    "growth-map": [
+      "feature-registry",
+      "field-ledger",
+      "unit-map",
+      "unit-kernel"
+    ],
+    "purpose-pack": [
+      "unit-kernel"
+    ],
+    "settle-prompt": [
+      "feature-registry",
+      "voice-mark"
+    ],
+    "voice-mark": [
+      "feature-registry",
+      "settle-prompt",
+      "read-ease"
+    ],
+    "read-ease": [
+      "voice-mark",
+      "feature-registry",
+      "settle-prompt",
+      "growth-map"
+    ]
+  },
+  "contradictions": [
+    {
+      "id": "C0001",
+      "a": "settle-prompt",
+      "b": "feature-registry",
+      "when": "User already ordered 定着, 登録, or 固定",
+      "prefer": "feature-registry",
+      "rule": "Skip Settle Prompt and register.",
+      "line": "「Settle Prompt」と「Feature Registry」は、定着が既に命じられたときは両立しません（聞かない）。"
+    },
+    {
+      "id": "C0005",
+      "a": "unit-map",
+      "b": "unit-kernel",
+      "when": "Tempted to add a routing level under Layer",
+      "prefer": "unit-kernel",
+      "rule": "Keep one layer level.",
+      "line": "「Unit Map」と「Unit Kernel」は、層の下にさらに段を足すことは両立しません（一段だけ）。"
+    },
+    {
+      "id": "C0006",
+      "a": "field-ledger",
+      "b": "feature-registry",
+      "when": "Listing registered units in the locked Registry voice",
+      "prefer": "feature-registry",
+      "rule": "Append a ledger row. Do not dump the log into the catalog.",
+      "line": "「Field Ledger」と「Feature Registry」は、機能一覧に記録全文を載せることは両立しません（追記のみ）。"
+    },
+    {
+      "id": "C0008",
+      "a": "read-ease",
+      "b": "feature-registry",
+      "when": "Tempted to rewrite the locked Registry intro shorter",
+      "prefer": "feature-registry",
+      "rule": "Keep the locked intro. Ease sits on top.",
+      "line": "「Read Ease」と「Feature Registry」は、固定の導入を短く書き直すことは両立しません（導入は固定）。"
+    },
+    {
+      "id": "C0009",
+      "a": "growth-map",
+      "b": "feature-registry",
+      "when": "Listing registered units in the locked Registry voice",
+      "prefer": "feature-registry",
+      "rule": "Append a growth row. Do not dump the growth log into the catalog.",
+      "line": "「Growth Map」と「Feature Registry」は、機能一覧に成長の全文を載せることは両立しません（追記のみ）。"
+    },
+    {
+      "id": "C0010",
+      "a": "growth-map",
+      "b": "field-ledger",
+      "when": "Tempted to store lineage in the event log, or events in the growth log",
+      "prefer": "growth-map",
+      "rule": "Events go to Field Ledger. Lineage goes to Growth Map.",
+      "line": "「Growth Map」と「Field Ledger」は、系統と出来事を一つの台帳に混ぜることは両立しません（分けて追記）。"
+    },
+    {
+      "id": "C0011",
+      "a": "read-ease",
+      "b": "growth-map",
+      "when": "Tempted to paste the whole growth log into chat",
+      "prefer": "growth-map",
+      "rule": "Show the map. Open matching log lines for 詳細.",
+      "line": "「Read Ease」と「Growth Map」は、成長の全文貼付とすぐ分かることを両立しません（写像を先に）。"
+    }
+  ],
+  "forbids": [
+    {
+      "id": "F0001",
+      "unit": "voice-mark",
+      "when": "Tempted to use markdown bold in user-facing Japanese",
+      "rule": "Use underline and 括弧.",
+      "line": "「Voice Mark」は、太字と下線を両立しません（太字は使わない）。"
+    },
+    {
+      "id": "F0002",
+      "unit": "voice-mark",
+      "when": "Tempted to split one locked sentence into 手段 目標 条件 理由 措置",
+      "rule": "Keep one sentence. Bullets only for parallel items.",
+      "line": "「Voice Mark」は、一文のラベル分割と箇条書きを両立しません（分割しない）。"
+    },
+    {
+      "id": "F0003",
+      "unit": "read-ease",
+      "when": "Tempted to replace 熟語 with baby-talk やさしい日本語",
+      "rule": "Keep the term. Add a （注）.",
+      "line": "「Read Ease」は、熟語を幼児語に崩すこととすぐ分かることを両立しません（語は残す）。"
+    },
+    {
+      "id": "F0004",
+      "unit": "read-ease",
+      "when": "Tempted to dump every unit and contradiction in a non-Registry turn",
+      "rule": "Say the point first. Open only matching specs.",
+      "line": "「Read Ease」は、全文の羅列とすぐ分かることを両立しません（必要な文だけ）。"
+    },
+    {
+      "id": "F0005",
+      "unit": "growth-map",
+      "when": "Tempted to invent a growth step that did not happen",
+      "rule": "Record only observed growth.",
+      "line": "「Growth Map」は、起きていない段の創作と記録を両立しません（観測だけ）。"
+    },
+    {
+      "id": "F0006",
+      "unit": "growth-map",
+      "when": "Tempted to rewrite a growth row",
+      "rule": "Append a new id. Do not edit the old line.",
+      "line": "「Growth Map」は、行の書き換えと追記を両立しません（直さない）。"
+    }
+  ],
+  "units": {
+    "feature-registry": {
+      "name": "Feature Registry",
+      "version": "v1.8",
+      "layer": "dispatch",
+      "when": "Every turn: decide which Features to draw. Also when the user locks, registers, or bumps a behavior.",
+      "note": "照合と引き出し",
+      "spec": ".cursor/rules/framework.mdc",
+      "line": "「Feature Registry v1.8」は、状況と when を照合し、一致した spec だけ開きます（照合と引き出し）。"
+    },
+    "unit-map": {
+      "name": "Unit Map",
+      "version": "v1.1",
+      "layer": "dispatch",
+      "when": "Every turn, before opening any spec: look up layers, related, and contradictions in map.json.",
+      "note": "階層と矛盾",
+      "spec": ".cursor/rules/unit-map.mdc",
+      "line": "「Unit Map v1.1」は、階層と矛盾を map.json で管理し、必要な spec だけ開きます（矛盾も照合）。"
+    },
+    "unit-kernel": {
+      "name": "Unit Kernel",
+      "version": "v1.0",
+      "layer": "kernel",
+      "when": "Porting this protocol to another system, or designing the kernel itself.",
+      "note": "移植",
+      "spec": ".cursor/rules/unit-kernel.mdc",
+      "line": "「Unit Kernel v1.0」は、他のシステムへ移植する核を定義します（移植）。"
+    },
+    "field-ledger": {
+      "name": "Field Ledger",
+      "version": "v1.0",
+      "layer": "record",
+      "when": "A fact, experiment, success, failure, or insight appeared this turn, or a past record's when matches.",
+      "note": "記録",
+      "spec": ".cursor/rules/field-ledger.mdc",
+      "line": "「Field Ledger v1.0」は、事実・実験・成否を追記し、必要な記録だけ開きます（記録）。"
+    },
+    "growth-map": {
+      "name": "Growth Map",
+      "version": "v1.0",
+      "layer": "record",
+      "when": "A unit was born, bumped, locked, rejected, split, settled, or stored, or the user asked how units grow.",
+      "note": "成長の記録",
+      "spec": ".cursor/rules/growth-map.mdc",
+      "line": "「Growth Map v1.0」は、最小単位の成長を写像し、過程を追記します（成長の記録）。"
+    },
+    "purpose-pack": {
+      "name": "Purpose Pack",
+      "version": "v1.0",
+      "layer": "purpose",
+      "when": "Deciding what this instance is for, or porting to another system.",
+      "note": "目的",
+      "spec": ".cursor/rules/purpose-pack.mdc",
+      "line": "「Purpose Pack v1.0」は、この場の目的を載せ、核は汎用のまま特化します（目的）。"
+    },
+    "settle-prompt": {
+      "name": "Settle Prompt",
+      "version": "v1.0",
+      "layer": "protocol",
+      "when": "A reusable unregistered form appeared, or the user praised a form, without already ordering 定着 or 登録.",
+      "note": "定着の可否",
+      "spec": ".cursor/rules/settle-prompt.mdc",
+      "line": "「Settle Prompt v1.0」は、未登録の型を褒めたとき、定着させるかと聞きます（定着の可否）。"
+    },
+    "voice-mark": {
+      "name": "Voice Mark",
+      "version": "v1.2",
+      "layer": "mark",
+      "when": "Any drawn Feature is writing user-facing Japanese.",
+      "note": "太字は使わない",
+      "spec": ".cursor/rules/voice-mark.mdc",
+      "line": "「Voice Mark v1.2」は、強調に下線、注に括弧、並列が続くときは箇条書きを使います（太字は使わない）。"
+    },
+    "read-ease": {
+      "name": "Read Ease",
+      "version": "v1.1",
+      "layer": "mark",
+      "when": "Any drawn Feature is writing user-facing Japanese.",
+      "note": "一文一義",
+      "spec": ".cursor/rules/read-ease.mdc",
+      "line": "「Read Ease v1.1」は、査読の原則で、すぐ分かる日本語にします（一文一義）。"
+    }
+  }
+}

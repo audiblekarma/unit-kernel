@@ -1,0 +1,18 @@
+---
+description: When writing user-facing Japanese protocol copy, underline and parentheses, and structure when the situation needs it
+alwaysApply: false
+---
+
+# Voice Mark v1.2
+
+Registered Feature of Studio Framework v1.9. Drawn whenever another Feature writes user-facing Japanese. Draw with 「Read Ease v1.1」。 When listing many units, group `line`s under the layer name from map.json.
+
+Bold is hard to see. Do not use `**bold**` in user-facing Japanese.
+
+- Underline carrying words with `<u>…</u>`: registry fields, the action, the reason. Not whole sentences.
+- 「」 around Feature names and versions（「Action Guide v1.0」）.
+- （） for a gloss, a limit, or an exception. Use them more often than before（今回は使わない / 貼付は1行 / 定着の可否）.
+- Structure with bullets when listing two or more parallel items, or when one paragraph would be hard to scan. Each bullet stays one sentence of the locked 語数.
+- Do not split a single locked sentence into 手段 / 目標 / 条件 / 理由 / 措置. That form was rejected.
+- Do not nest parentheses. Do not wrap a whole paragraph in parentheses.
+- Do not change a Feature's locked sentence shape. Marks sit on top of it.

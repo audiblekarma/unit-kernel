@@ -1,0 +1,83 @@
+{
+  "framework": {
+    "id": "unit-kernel",
+    "name": "Unit Kernel",
+    "version": "v1.0",
+    "kernel": "Unit Kernel v1.0",
+    "summary": "Portable operating kernel. Specs and ledger lines open only on a when-match."
+  },
+  "features": [
+    {
+      "id": "feature-registry",
+      "name": "Feature Registry",
+      "version": "v1.8",
+      "layer": "dispatch",
+      "status": "registered",
+      "spec": ".cursor/rules/framework.mdc"
+    },
+    {
+      "id": "unit-map",
+      "name": "Unit Map",
+      "version": "v1.1",
+      "layer": "dispatch",
+      "status": "registered",
+      "spec": ".cursor/rules/unit-map.mdc"
+    },
+    {
+      "id": "unit-kernel",
+      "name": "Unit Kernel",
+      "version": "v1.0",
+      "layer": "kernel",
+      "status": "registered",
+      "spec": ".cursor/rules/unit-kernel.mdc"
+    },
+    {
+      "id": "field-ledger",
+      "name": "Field Ledger",
+      "version": "v1.0",
+      "layer": "record",
+      "status": "registered",
+      "spec": ".cursor/rules/field-ledger.mdc"
+    },
+    {
+      "id": "growth-map",
+      "name": "Growth Map",
+      "version": "v1.0",
+      "layer": "record",
+      "status": "registered",
+      "spec": ".cursor/rules/growth-map.mdc"
+    },
+    {
+      "id": "purpose-pack",
+      "name": "Purpose Pack",
+      "version": "v1.0",
+      "layer": "purpose",
+      "status": "registered",
+      "spec": ".cursor/rules/purpose-pack.mdc"
+    },
+    {
+      "id": "settle-prompt",
+      "name": "Settle Prompt",
+      "version": "v1.0",
+      "layer": "protocol",
+      "status": "registered",
+      "spec": ".cursor/rules/settle-prompt.mdc"
+    },
+    {
+      "id": "voice-mark",
+      "name": "Voice Mark",
+      "version": "v1.2",
+      "layer": "mark",
+      "status": "registered",
+      "spec": ".cursor/rules/voice-mark.mdc"
+    },
+    {
+      "id": "read-ease",
+      "name": "Read Ease",
+      "version": "v1.1",
+      "layer": "mark",
+      "status": "registered",
+      "spec": ".cursor/rules/read-ease.mdc"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "replace-me",
+  "name": "",
+  "version": "v1.0",
+  "instance": "Unit Kernel",
+  "aims": [],
+  "constraints": [
+    "English Feature names. Versions v1.0.",
+    "No bold in user-facing Japanese.",
+    "Draw only on a when match."
+  ],
+  "kernel": "Unit Kernel v1.0",
+  "hierarchy": ".cursor/framework/HIERARCHY.txt",
+  "port": "Replace this file. Keep kernel units. Copy portable ledger rows."
+}

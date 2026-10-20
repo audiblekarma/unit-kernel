@@ -1,0 +1,77 @@
+Read Ease v1.1  採った規則とソース
+（論文の全文は置かない。規則だけ。）
+
+
+負荷を捨てる
+    Sweller, Cognitive Load Theory
+    Mayer, coherence（中央値 d ≈ 0.86）
+    → いま必要な文以外は出さない
+
+
+先頭に核
+    Mayer, pretraining
+    → 最初の一文が結論
+
+
+印で注意を案内する
+    Alpizar, Adesope, Wong, 2020, ETR&D, d = 0.38
+    Schneider, Beege, Nebel, Rey, 2018, Educational Research Review
+        保持 g+ = 0.53、転移 g+ = 0.33
+    → 層名が見出し。用語の直後に（注）。下線は担う語だけ
+
+
+近い注
+    Mayer, spatial contiguity
+    → （注）は語の直後
+
+
+区切る
+    Rey, Beege, Nebel, Wirzberger, Schmitt, Schneider, 2019, segmenting meta-analysis
+    → 層で束ねる。連続した長文にしない
+
+
+話しことば
+    Mayer, personalization
+    → ですます。能動。肯定
+
+
+日本語の文
+    教育メディア研究 25(4), 一文の表現と内容理解
+        50字未満は反応が速い
+        話題は一つ
+        接続の「が」は前件の正答を落とす
+        主語は述語の近く
+        30字超は読点
+    → 新規の文に適用。固定行は例外
+
+
+作業記憶
+    Cowan, 2001, BBS, 焦点は約 3〜5 チャンク
+    → 並列は 3〜4（最大 5）
+
+
+箇条書き
+    Jansen, 2014, Information Design Journal
+    → 並列の項目に使う。地の文と混ぜすぎない
+
+
+再分析
+    Tokimoto, 日本語 Reading Span と再分析
+    → 読み直しを招く複文を避ける
+
+
+字形
+    慣れた漢字表記のまま（字形期待）
+    → 熟語は残す。（注）だけ添える
+
+
+境界
+    Richter 系, signaling の expertise reversal
+    → 既知の核に印を増やしすぎない
+
+
+採らない
+    読みにくいフォント（disfluency）
+    分かち書き
+    固定文の 50 字への書き換え
+    幼児語化

@@ -1,0 +1,14 @@
+---
+description: After a turn that produced a fact, experiment, success, failure, or insight; or when a past record's when matches
+alwaysApply: false
+---
+
+# Field Ledger v1.0
+
+Registered Feature of Studio Framework v1.11. Index: `.cursor/framework/ledger/index.json`. Log: `.cursor/framework/ledger/log.jsonl`. Lineage is 「Growth Map v1.0」, not this log.
+
+Append one row when this turn produced a `fact`, `experiment`, `success`, `failure`, or `insight`. Keep `fact` observational. Put interpretation in `insight`. Put the lock in `decision`. Do not rewrite a row. Supersede with a new id.
+
+Each turn, read the index only. Open the matching log line when `when` matches. Do not dump the log in chat.
+
+`portable: true` if the lesson should travel with Unit Kernel. `portable: false` if it is only this Purpose Pack.

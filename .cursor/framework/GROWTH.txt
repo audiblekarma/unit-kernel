@@ -1,0 +1,91 @@
+Unit Kernel  成長の写像
+最小単位は、少しずつ増える。過程の本文は growth/log.jsonl。
+
+
+0. 読み方
+
+    seed  未登録の型が出た
+    born  v1.0 として載った
+    lock  文や型を固定した（版はそのまま）
+    bump  版が上がった
+    reject  拒まれた。引き算で育つ
+    split  一つの関心が、二つの単位になった
+    settle  その版で定着した
+    store  置き場が決まった
+
+
+1. Protocol（最初に育った）
+
+    Action Guide  → いま v1.0
+        seed   必要な URL を一つだけ出す
+        lock   日本語と熟語、三行の語数
+        lock   同じ語数の箇条書き
+        reject 手段／目標のラベル分割
+        lock   一文に戻す
+        reject 終わったら削除します（短すぎる）
+        born   操作案内 1.0
+        lock   英語名 Action Guide v1.0
+        reject クリック以外に混ぜる
+
+    Settle Prompt  → いま v1.0
+        born   未登録の型を褒めたら、定着させるか聞く
+
+
+2. Dispatch（照合が核になる）
+
+    Feature Registry  → いま v1.8
+        born   名前を付けて載せる v1.0
+        bump   when が一致したときだけ出す v1.1
+        bump   定着の可否と、固定の導入文 v1.2
+        bump   Voice Mark を引き出す v1.3
+        bump   並列は箇条書き v1.4
+        bump   map.json で先に照合 v1.5
+        bump   台帳と目的を開く v1.6
+        bump   矛盾を照合する v1.7
+        bump   成長の写像を開く v1.8
+
+    Unit Map  → いま v1.1
+        born   層で索引する v1.0
+        bump   矛盾と禁止を地図に載せる v1.1
+
+
+3. Mark（日本語の負荷）
+
+    Voice Mark  → いま v1.2
+        born   太字と括弧 v1.0
+        bump   読みにくい並列を箇条書き v1.1
+        bump   太字をやめ、下線と括弧 v1.2
+
+    Read Ease  → いま v1.1
+        split  Voice Mark から、負荷の規則が分かれる
+        born   すぐ分かる日本語 v1.0
+        bump   査読の出典を載せる v1.1
+        settle 出典の混在を含めて、いまは十分
+
+
+4. Kernel / Record / Purpose（移植の形）
+
+    Unit Kernel  → いま v1.0
+        born   移植する核
+        settle 階層本文で v1.8 定着
+        store  zip 公開は誤り。git が本体
+        store  GitHub の名は unit-kernel（Studio も Entheria も入れない）
+
+    Field Ledger  → いま v1.0
+        born   事実・実験・成否・洞察を追記
+
+    Purpose Pack  → いま v1.0
+        born   目的は purpose.json に載せる
+
+    Growth Map  → いま v1.0
+        born   単位の成長を写像し、過程を追記
+
+
+5. 枠の版
+
+    v1.6  Unit Map が載る
+    v1.7  核・台帳・目的が載る
+    v1.8  矛盾を地図にし、定着する
+    v1.9  Read Ease が載る
+    v1.10 Read Ease v1.1、出典は十分
+    v1.11 Growth Map が載る

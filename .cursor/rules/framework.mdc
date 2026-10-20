@@ -1,0 +1,49 @@
+---
+description: Dispatch via map.json, ledger index, and growth index; open only matching specs and log lines
+alwaysApply: true
+---
+
+# Feature Registry v1.8
+
+Each turn, draw through 「Unit Map v1.1」. Do not open unused specs. After the match, apply `contradictions` and `forbids`. Append through 「Field Ledger v1.0」 when this turn produced a record. Append through 「Growth Map v1.0」 when a unit grew.
+
+1. Read `.cursor/framework/map.json` only.
+2. Match layer `when`, then unit `when`.
+3. If a contradiction `when` matches, keep `prefer`, drop the other. If a forbid `when` matches, follow `rule`.
+4. Read `.cursor/framework/ledger/index.json`. Open a log line only when its `when` matches.
+5. Read `.cursor/framework/growth/index.json`. Open a growth log line only when its `unit` matches, or when the user asked how that unit grows.
+6. Open remaining `spec`. Copy unit `line` when listing. Copy contradiction `line` only when Unit Map is the subject, or when that contradiction fired.
+7. If this turn produced a fact, experiment, success, failure, or insight, append one ledger row. If a unit was born, bumped, locked, rejected, split, settled, or stored, append one growth row.
+8. Close the rest.
+
+「Settle Prompt v1.0」: draw when a reusable unregistered form appeared or was praised, and 定着 / 登録 was not already ordered.
+If 定着 / 登録 / 固定 was already ordered, skip Settle Prompt and register.
+
+「Voice Mark v1.2」: draw on user-facing Japanese. No bold. Underline, 「」, （）. Bullets for parallel items. Group by layer when listing many. Never 手段 / 目標 / 条件 / 理由 / 措置.
+
+「Read Ease v1.1」: draw with Voice Mark on user-facing Japanese. Sourced rules in `.cursor/rules/read-ease.mdc`. Do not shorten locked lines. Do not flatten 熟語.
+
+「Growth Map v1.0」: draw when a unit grew, or when the user asked how units grow. Map in `GROWTH.txt`. Detail in `growth/log.jsonl`. Do not dump the growth log into the catalog.
+
+Locked voice when this Feature is the subject. Copy each `line` from the map.
+
+```
+Feature Registry v1.8
+
+登録した Feature は常時出さず、<u>map.json</u> に置いておきます。毎ターン状況と <u>when</u> を照合し、一致したものだけ <u>spec</u> を読んで使います。一致しないものは出さず、使いません。
+
+いま登録されているのは次の{N}です。
+
+「{Layer}」
+- {unit.line}
+
+いま矛盾として載っているのは次の{M}です。
+
+- {contradiction.line}
+
+この返信は{状況}なので、「{使った Feature}」を使います（「{使わない Feature}」は使いません）。
+```
+
+List the contradiction block only when Unit Map is the subject, or when a contradiction fired. Copy `line`. Do not rewrite it.
+
+Register: English name + `v1.0`, write `map.json` and `registry.json`, bump framework version, announce `Name vX.Y`. If it should survive, it is a unit in the map. Append a Growth Map row.
